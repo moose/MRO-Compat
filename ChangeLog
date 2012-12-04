@@ -1,5 +1,8 @@
 Revision history for Perl extension MRO::Compat.
 
+    - Bump Class::C3 dependency on 5.8 which in turn will automatically
+      install Class::C3::XS if possible
+
 0.11 - Wed May 27, 2009
     - Fix misspelled docs for get_isarev. Closes RT#46401.
     - Bump optional prereq on Class::C3 to 0.20.
