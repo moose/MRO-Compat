@@ -1,5 +1,6 @@
 Revision history for Perl extension MRO::Compat.
 
+0.12 - Tue Dec 4, 2012
     - Bump Class::C3 dependency on 5.8 which in turn will automatically
       install Class::C3::XS if possible
     - Fix nonfunctional SYNOPSIS (RT#78325)
