@@ -1,3 +1,4 @@
+MYMETA\.(yml|json)
 ^_build
 ^Build$
 ^blib
