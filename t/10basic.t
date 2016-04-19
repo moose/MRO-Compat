@@ -1,12 +1,9 @@
-
 use strict;
 use warnings;
 
-use Test::More tests => 11;
+use Test::More tests => 10;
 
-BEGIN {
-    use_ok('MRO::Compat');
-}
+use MRO::Compat;
 
 {
     package AAA; our @ISA = qw//;

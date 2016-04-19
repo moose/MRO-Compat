@@ -1,9 +1,9 @@
 use strict;
 use warnings;
 
-use Test::More tests => 4;
+use Test::More tests => 3;
 
-BEGIN { use_ok('MRO::Compat') }
+use MRO::Compat;
 
 {
     package Foo;

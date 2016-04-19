@@ -1,12 +1,9 @@
-
 use strict;
 use warnings;
 
-use Test::More tests => 14;
+use Test::More tests => 13;
 
-BEGIN {
-    use_ok('MRO::Compat');
-}
+use MRO::Compat;
 
 {
     package AAA; our @ISA = qw//; use mro 'dfs';
