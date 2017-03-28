@@ -28,8 +28,8 @@ my %META = (
   },
   resources => {
     repository => {
-      url => 'git://git.shadowcat.co.uk/gitmo/MRO-Compat.git',
-      web => 'http://git.shadowcat.co.uk/gitweb/gitweb.cgi?p=gitmo/MRO-Compat.git',
+      url => 'git://github.com/moose/MRO-Compat.git',
+      web => 'https://github.com/moose/MRO-Compat',
       type => 'git',
     },
     bugtracker => {
