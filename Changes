@@ -1,5 +1,6 @@
 Revision history for Perl extension MRO::Compat.
 
+0.13 - 2017-03-28
     - don't run pod tests on user installs
     - stop using Module::Install to fix installation when @INC doesn't have
       the current directory (RT#119016)
