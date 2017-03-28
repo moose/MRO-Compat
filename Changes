@@ -1,5 +1,8 @@
 Revision history for Perl extension MRO::Compat.
 
+    - don't run pod tests on user installs
+    - stop using Module::Install to fix installation when @INC doesn't have
+      the current directory (RT#119016)
     - repository migrated to the github moose organization
 
 0.12   2012-12-04
