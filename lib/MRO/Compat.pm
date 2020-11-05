@@ -115,20 +115,16 @@ methods from C<UNIVERSAL> and its parents.
 =cut
 
 sub __get_linear_isa_dfs {
-    no strict 'refs';
+    my @check = shift;
+    my @lin;
 
-    my $classname = shift;
-
-    my @lin = ($classname);
-    my %stored;
-    foreach my $parent (@{"$classname\::ISA"}) {
-        my $plin = __get_linear_isa_dfs($parent);
-        foreach (@$plin) {
-            next if exists $stored{$_};
-            push(@lin, $_);
-            $stored{$_} = 1;
-        }
+    my %found;
+    while (defined(my $check = shift @check)) {
+        push @lin, $check;
+        no strict 'refs';
+        unshift @check, grep !$found{$_}++, @{"$check\::ISA"};
     }
+
     return \@lin;
 }
 
