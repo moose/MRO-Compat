@@ -150,7 +150,7 @@ sub __get_linear_isa {
 
 This allows the C<use mro 'dfs'> and
 C<use mro 'c3'> syntaxes, providing you
-L<use MRO::Compat> first.  Please see the
+C<use MRO::Compat> first.  Please see the
 L</USING C3> section for additional details.
 
 =cut
