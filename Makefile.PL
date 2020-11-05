@@ -7,22 +7,22 @@ my %META = (
   license => 'perl_5',
   prereqs => {
     configure => { requires => {
-      'ExtUtils::MakeMaker'   => 0,
+      'ExtUtils::MakeMaker' => 0,
     } },
     test => {
       requires => {
-        'Test::More' => '0.47',
+        'Test::More'    => '0.47',
       },
     },
     runtime => {
       requires => {
-        'perl'          => 5.006,
+        'perl'          => '5.006',
       },
     },
     develop => {
       requires => {
-        'Test::Pod' => 1.14,
-        'Test::Pod::Coverage' => 1.04,
+        'Test::Pod'           => '1.14',
+        'Test::Pod::Coverage' => '1.04',
       },
     },
   },
