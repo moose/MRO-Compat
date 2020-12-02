@@ -128,7 +128,7 @@ sub __get_linear_isa_dfs {
     return \@lin;
 }
 
-sub __get_linear_isa {
+sub __get_linear_isa ($;$) {
     my ($classname, $type) = @_;
     die "mro::get_mro requires a classname" if !defined $classname;
 
@@ -166,7 +166,7 @@ section for additional details.
 
 =cut
 
-sub __set_mro {
+sub __set_mro ($$) {
     my ($classname, $type) = @_;
 
     if(!defined $classname || !$type) {
@@ -200,7 +200,7 @@ even before L<Class::C3::initialize()> is called.
 
 =cut
 
-sub __get_mro {
+sub __get_mro ($) {
     my $classname = shift;
     die "mro::get_mro requires a classname" if !defined $classname;
     return 'c3' if exists $Class::C3::MRO{$classname};
@@ -276,7 +276,7 @@ sub __get_isarev_recurse {
     return [keys %retval];
 }
 
-sub __get_isarev {
+sub __get_isarev ($) {
     my $classname = shift;
     die "mro::get_isarev requires a classname" if !defined $classname;
 
@@ -295,7 +295,7 @@ inherit methods from it.
 
 =cut
 
-sub __is_universal {
+sub __is_universal ($) {
     my $classname = shift;
     die "mro::is_universal requires a classname" if !defined $classname;
 
@@ -318,7 +318,7 @@ method caching.
 
 =cut
 
-sub __invalidate_all_method_caches {
+sub __invalidate_all_method_caches () {
     # Super secret mystery code :)
     @f845a9c1ac41be33::ISA = @f845a9c1ac41be33::ISA;
     return;
@@ -339,7 +339,7 @@ method caching.
 
 =cut
 
-sub __method_changed_in {
+sub __method_changed_in ($) {
     my $classname = shift;
     die "mro::method_changed_in requires a classname" if !defined $classname;
 
@@ -357,14 +357,14 @@ it will probably increment a lot more often than necessary.
 
 {
     my $__pkg_gen = 2;
-    sub __get_pkg_gen_pp {
+    sub __get_pkg_gen_pp ($) {
         my $classname = shift;
         die "mro::get_pkg_gen requires a classname" if !defined $classname;
         return $__pkg_gen++;
     }
 }
 
-sub __get_pkg_gen_c3xs {
+sub __get_pkg_gen_c3xs ($) {
     my $classname = shift;
     die "mro::get_pkg_gen requires a classname" if !defined $classname;
 
