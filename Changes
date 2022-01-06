@@ -1,5 +1,6 @@
 Revision history for Perl extension MRO::Compat.
 
+0.15 - 2022-01-06
     - fix function prototypes to match core functions
 
 0.14_01 - 2020-11-16
